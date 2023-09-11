@@ -1,20 +1,23 @@
 import React from "react";
+import '../hojas-de-estilo/Testimonio.css';
 
-function Testimonio() {
+class Testimonio extends React.Component {
+  render() {
     return (
-        <div className='contenedor-testimonio'>
-            <img 
-              className='imagen-testimonio' 
-              src={require('../imagenes/testimonio-emma.png')}
-              alt='Foto de Emma'/> 
-            <div className='contenedor-testo-testimonio'>
-              <p className='nombre-testimonio'>Emma Bostian en Suecia</p>
-              <p className='cargo-testimonio'>Ingeniera de Software en Spotify</p>
-              <p className='texto-textimonio'>"Siempre he tenido problemas para aprender JavaScript. He tomado muchos cursos, pero el curso de freeCodeCamp fue el que se quedó. Estudiar JavaScript, así como estructuras de datos y algoritmos en freeCodeCamp me dio las habilidades y la confianza que necesitaba para conseguir el trabajo de mis sueños como ingeniero de software en Spotify."</p>
+      <div className='contenedor-testimonio'>
+          <img 
+            className='imagen-testimonio' 
+            src={require(`../imagenes/testimonio-${this.props.imagen}.png`)}
+            alt={`Foto de ${this.props.nombre}`} /> 
+          <div className='contenedor-testo-testimonio'>
+            <p className='nombre-testimonio'><strong>{this.props.nombre}</strong> en {this.props.pais}</p>
+            <p className='cargo-testimonio'>{this.props.cargo} en <strong>{this.props.empresa}</strong></p>
+            <p className='texto-textimonio'>"{this.props.testimonio}"</p>
 
-            </div>
-        </div>
-    );
+          </div>
+      </div>
+  );
+  }
 }
 
 export default Testimonio;

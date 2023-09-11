@@ -1,1 +1,45 @@
+/*selector universal para toda la app*/
+/*es muy comun dar a toda la pagina un margen y un padding de zero*/
+* {
+    margin: 0;
+    padding: 0;
+}
 
+html, 
+body {
+    font-size: 18px;
+    background-color: #f5f6f7;
+}
+
+h1 {
+    max-width: 940px;
+    font-size: 2.5em;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 40px 0;
+}
+
+/*ahora le asignamos un estilo al div con clase App*/
+
+.App {
+    min-height: 100vh; /*con vh se adapta a la altura del navegador: 
+    la aplicacion va a tomar minimo el 100% de la pantalla verticalmente */
+    display: flex; 
+    /*con wrap en flex-wrap un elemento toma todo el ancho del contenedor, los otros elementos van a ubicarse en la siguiente linea*/
+    flex-wrap: wrap;
+    /*con las dos propriedades siguientes los elementos se centran horizontal y verticalmente*/
+    align-items: center;
+    justify-content: center;
+    /*alineamos el texto tmb en el centro*/
+    text-align: center;
+}
+
+/*le aisgnamos un estilo al div con clase contenedor principal */
+.contenedor-principal {
+    min-height: 600px; /*damos aluta minima y no slo altura para que se adapte y no se estire*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
